@@ -13,7 +13,7 @@ import {
 } from "./constants"
 import { getProducts } from "../../api/product"
 
-let debouncedFetchProducts = debounce(getProducts, 1000)
+let debouncedFetchProducts = debounce(getProducts, 500)
 
 export const fetchProducts = () => {
     return async (dispatch, getState) => {
@@ -35,7 +35,7 @@ export const fetchProducts = () => {
         }
 
         try {
-            let { data: {data, count}} = await debouncedFetchProducts({params})
+            let { data: {data, count}} = await debouncedFetchProducts(params)
             dispatch(successFetchingProducts({data, count}))
         } catch (err) {
             dispatch(errorFetchingProducts())

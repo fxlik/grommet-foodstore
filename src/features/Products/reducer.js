@@ -1,10 +1,3 @@
-const statusList = {
-    iddle: 'iddle',
-    process: 'process',
-    success: 'success',
-    error: 'error'
-}
-
 import { 
     START_FETCHING_PRODUCT,
     ERROR_FETCHING_PRODUCT,
@@ -17,6 +10,13 @@ import {
     PREV_PAGE,
     TOGGLE_TAG
 } from "./constants"
+
+const statusList = {
+    iddle: 'iddle',
+    process: 'process',
+    success: 'success',
+    error: 'error'
+}
 
 const initialState = {
     data: [],

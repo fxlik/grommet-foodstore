@@ -6,6 +6,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 
 import { listen } from './app/listener';
+import { getCart } from './api/cart';
 
 // components
 import Register from './pages/Register';
@@ -45,6 +46,7 @@ const theme = {
 function App() {
   useEffect(() =>{
     listen()
+    getCart()
   }, [])
 
   return (

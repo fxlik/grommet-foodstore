@@ -4,8 +4,7 @@ import {
     Button,
     Form,
     FormField,
-    TextInput,
-    Heading
+    TextInput
 } from 'grommet'
 import { useForm } from 'react-hook-form'
 import { rules } from './validation';
